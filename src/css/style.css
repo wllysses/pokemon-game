@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+body {
+    background: url('../imgs/bg.png') center no-repeat;
+    background-size: cover;
+}
+
+.game-container {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+button {
+    background-color: green;
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border: none;
+    position: absolute;
+    top: 50vh;
+    left: 45vw;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+button:hover {
+    background-color: rgb(1, 102, 1);
+}
+
+.game-over {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.322);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .game-over h1 {
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    margin-top: -5rem;
+  }
+  
+  .rocket {
+    position: absolute;
+    bottom: 0;
+    right: -100px;
+    width: 100px;
+  }
+  
+  .pikachu{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+  }
+
+
+/* ANIMAÇÕES */
+
+  .rocket-animation {
+    animation: rocket-animation 2s infinite linear;
+  }
+
+  @keyframes rocket-animation {
+    from {
+      right: -80px;
+    }
+  
+    to {
+      right: 100%;
+    }
+  }
+  
+  .jump {
+    animation: jump 800ms ease-out;
+  }
+  
+  @keyframes jump {
+    0% {
+      bottom:  0;
+    }
+  
+    40% {
+      bottom: 200px;
+    }
+  
+    50% {
+      bottom: 200px;
+    }
+  
+    60% {
+      bottom: 200px;
+    }
+  
+    100% {
+      bottom: 0;
+    }
+  }
